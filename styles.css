@@ -1,7 +1,7 @@
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1.5fr 5fr;
+    grid-template-columns: 1.25fr 5fr;
     grid-template-rows: 1fr 4fr;
 }
 
@@ -11,8 +11,74 @@
 }
 
 .header {
-    background-color: blueviolet;
+    display: grid;
+    gap: 20px;
     grid-column: 2;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px 25px;
+}
+
+.header > div:nth-child(1) {
+    display: grid;
+    gap: 12%;
+    grid-template-columns: 4fr 1fr;
+}
+
+.header .left-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .left-section .search-box {
+    background-color: grey;
+    border-radius: 20px;
+    flex: 1;
+    height: 35px;
+}
+
+.header .left-section .search-button {
+    background-color: black;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.header .right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header .bottom-row {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+}
+
+.header .bottom-row .image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.header .bottom-row .user-info h1 {
+    margin: 0px;
+    font-size: larger;
+}
+
+.button {
+    background-color: rgb(24, 50, 196);
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .sidebar {
