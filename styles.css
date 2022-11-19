@@ -106,7 +106,8 @@ body {
 .header .bottom-row {
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    grid-template-columns: 70px 4fr 100px 100px 100px;
+    gap: 25px;
 }
 
 .header .bottom-row .image {
@@ -120,13 +121,10 @@ body {
 .header .bottom-row .user-info span {
     display: block;
     margin: 0px;
-    /* font-size: larger; */
     font-size: 24px;
 }
 
 .button {
-    /* align-self: flex-end; */
-    justify-self: flex-end;
     background-color: var(--blue);
     width: 100px;
     height: 40px;
