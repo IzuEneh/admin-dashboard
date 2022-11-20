@@ -4,6 +4,9 @@
     --grey: #d1d5db;
     --orange: #d97706;
     --yellow: #fde047;
+    --light-blue: #bae6fd;
+    --dark-grey: #64748b;
+    --pink: #fb7185;
 }
 body {
     margin: 0px;
@@ -24,12 +27,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 20px 10px 35px;
+    padding: 20px 30px 35px 10px;
 }
 
 .content .article-section {
     grid-column: 1 / span 2;
     grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .content .article-section .articles {
@@ -39,22 +44,77 @@ body {
     column-gap: 20px;
     row-gap: 30px;
     justify-items: center;
+    flex: 1;
 }
 
 .article {
     background-color: white;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
     border-left-color: var(--orange);
     border-left-style: solid;
     border-left-width: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 10px;
+}
+
+.article .title {
+    font-weight: 700;
+}
+
+.article .text {
+    flex: 1;
+}
+
+.article .buttons {
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    gap: 25px;
+}
+
+.article .buttons .button-icon {
+    height: 25px;
+    width: auto;
 }
 
 .content .extra-section {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    gap: 35px;
     grid-row: 1 / 3;
+}
+
+.announcements, .trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .extra-section .block {
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 15px;
+    flex: 1;
+    padding: 35px 35px 20px;
+    border-radius: 15px;
+}
+
+.blurb .title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+
+.blurb:nth-child(-n + 2) {
+    border-bottom-style: solid;
+    border-bottom-color: var(--grey);
+    border-bottom-width: 2px;
+    padding-bottom: 10px;
 }
 
 .header {
@@ -185,4 +245,28 @@ body {
     height: 25px;
     /* chnages color to white */
     filter: invert(99%) sepia(5%) saturate(30%) hue-rotate(335deg) brightness(106%) contrast(100%); 
+}
+
+.trending .block .handle {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.handle .text {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.handle .profile-pic {
+    height: 55px;
+    width: 55px;
+    background-color: #fde047;
+    border-radius: 50%;
+}
+
+h2.subheading {
+    font-size: 20px;
+    margin: 10px 0px 15px;
 }
